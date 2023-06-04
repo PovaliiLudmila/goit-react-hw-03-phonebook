@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.82757dfc.css",
-    "main.js": "/react-homework-template/static/js/main.819144a4.js",
-    "static/media/delete-button-svgrepo-com.svg": "/react-homework-template/static/media/delete-button-svgrepo-com.d5dd20bf3266fd593210.svg",
-    "index.html": "/react-homework-template/index.html",
-    "main.82757dfc.css.map": "/react-homework-template/static/css/main.82757dfc.css.map",
-    "main.819144a4.js.map": "/react-homework-template/static/js/main.819144a4.js.map"
+    "main.css": "/goit-react-hw-03-phonebook/static/css/main.ca2bdcbb.css",
+    "main.js": "/goit-react-hw-03-phonebook/static/js/main.d89af3e3.js",
+    "static/media/delete-button-svgrepo-com.svg": "/goit-react-hw-03-phonebook/static/media/delete-button-svgrepo-com.d5dd20bf3266fd593210.svg",
+    "index.html": "/goit-react-hw-03-phonebook/index.html",
+    "main.ca2bdcbb.css.map": "/goit-react-hw-03-phonebook/static/css/main.ca2bdcbb.css.map",
+    "main.d89af3e3.js.map": "/goit-react-hw-03-phonebook/static/js/main.d89af3e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.82757dfc.css",
-    "static/js/main.819144a4.js"
+    "static/css/main.ca2bdcbb.css",
+    "static/js/main.d89af3e3.js"
   ]
 }
