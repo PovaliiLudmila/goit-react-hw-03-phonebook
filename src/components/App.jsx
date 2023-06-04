@@ -17,48 +17,30 @@ export class App extends Component {
     filter: '',
   };
   }
-  // componentDidMount() {
-  //   try {
-  //     const json = localStorage.getItem('contacts');
-  //     const contacts = JSON.parse(json);
+  componentDidMount() {
+    const contactsToLocalStorage = localStorage.getItem(
+      'contactsToLocalStorage'
+    );
 
-  //     if (contacts) {
-  //       this.setState(() => ({ contacts: contacts }));
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+    if (contactsToLocalStorage) {
+      try {
+        const parseContactList = JSON.parse(contactsToLocalStorage);
+        this.setState({ contacts: parseContactList });
+      } catch {
+        this.setState({ contacts: [] });
+      }
+    }
+  }
 
-  // componentDidUpdate(prevState) {
-  //   if (prevState.contacts !== this.state.contacts) {
-  //     const json = JSON.stringify(this.state.contacts);
-  //     localStorage.setItem('contacts', json);
-  //   }
-  // }
-  // componentDidMount() {
-  //   const contactsToLocalStorage = localStorage.getItem(
-  //     'contactsToLocalStorage'
-  //   );
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem(
+        'contactsToLocalStorage',
+        JSON.stringify(this.state.contacts)
+      );
+    }
+  }
 
-  //   if (contactsToLocalStorage) {
-  //     try {
-  //       const parseContactList = JSON.parse(contactsToLocalStorage);
-  //       this.setState({ contacts: parseContactList });
-  //     } catch {
-  //       this.setState({ contacts: [] });
-  //     }
-  //   }
-  // }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.contacts !== prevState.contacts) {
-  //     localStorage.setItem(
-  //       'contactsToLocalStorage',
-  //       JSON.stringify(this.state.contacts)
-  //     );
-  //   }
-  // }
   addContact = event => {
     const loweredCase = event.name.toLowerCase().trim();
 

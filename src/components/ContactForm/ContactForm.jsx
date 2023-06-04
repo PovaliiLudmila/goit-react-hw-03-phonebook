@@ -19,7 +19,7 @@ class ContactForm extends Component {
 
     const event = {
       id: nanoid(),
-      nanpme: this.state.name,
+      name: this.state.name,
       number: this.state.number,
     };
 
